@@ -14,7 +14,13 @@ export default function RemoveBtn({ id }) {
       // const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
 
       // For local enviroment 
-      const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
+
+      
+      const apiUrl = process.env.SITE_URL;
+
+
+      // For production
+      const res = await fetch(`${apiUrl}/tasks/${id}`, {
         method: "DELETE",
       }
       

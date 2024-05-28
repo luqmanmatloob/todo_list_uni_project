@@ -27,8 +27,13 @@ console.log(userid)
 
     try {
 
+
+      const apiUrl = process.env.SITE_URL;
+      const res = await fetch(`${apiUrl}/api/tasks`, {
+
+
       // for development
-      const res = await fetch("http://localhost:3000/api/tasks", {
+      // const res = await fetch("http://localhost:3000/api/tasks", {
 
 
       // for production

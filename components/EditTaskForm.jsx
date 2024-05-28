@@ -16,8 +16,13 @@ export default function EditTaskForm({ id, title, description }) {
       // for local enviroment
       // const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
 
+      
+
+      const apiUrl = process.env.SITE_URL;
+
+
       // For production
-      const res = await fetch(`https://todoapp-luqman.vercel.app/api/tasks/${id}`, {
+      const res = await fetch(`${apiUrl}/api/tasks/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
